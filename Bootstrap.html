@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        background: linear-gradient(135deg, #1e304f, #3668b9);
+      }
+
+      .main-section {
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      /* Left content */
+      .left-content {
+        position: relative;
+      }
+
+      .left-content h1 {
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #f1f5ff;
+      }
+
+      .left-content h1 span {
+        color: #80a9f2;
+      }
+
+      .left-content p {
+        color: #91a8cf;
+        font-size: 20px;
+        line-height: 1.6;
+        max-width: 500px;
+      }
+
+      /* Sign up card */
+      .signup-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 60px;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      }
+
+      .form-control {
+        height: 45px;
+        border: 1px solid #bbb;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+
+      .form-control:focus {
+        box-shadow: none;
+        border-color: #3f75c9;
+      }
+
+      .form-check {
+        margin-top: 30px;
+        margin-bottom: 35px;
+      }
+
+      .form-check-input {
+        width: 22px;
+        height: 22px;
+        margin-right: 8px;
+      }
+
+      .form-check-label {
+        font-size: 18px;
+      }
+
+      .signup-btn {
+        height: 45px;
+        background-color: #3f75ca;
+        border: none;
+        font-weight: bold;
+        box-shadow: 0 5px 10px rgba(63, 117, 202, 0.25);
+      }
+
+      .signup-btn:hover {
+        background-color: #3267b8;
+      }
+
+      .or-text {
+        text-align: center;
+        font-size: 18px;
+        margin: 38px 0;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 42px;
+      }
+
+      .social-icons a {
+        color: #3f75ca;
+        font-size: 17px;
+        background-color: #f1f5ff;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 5px 10px rgba(63, 117, 202, 0.25);
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <section class="main-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- LEFT SIDE -->
+          <div class="col-lg-6">
+            <div class="left-content">
+              <h1>
+                The best offer<br />
+                <span>for your business</span>
+              </h1>
+
+              <p class="mt-5">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Temporibus, expedita iusto veniam atque, magni tempora mollitia
+                dolorum consequatur nulla, neque debitis eos reprehenderit quasi
+                ab ipsum nisi dolorem modi. Quos?
+              </p>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE -->
+          <div class="col-lg-6">
+            <div class="signup-card">
+              <form action="/action_page.php">
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First name"
+                    />
+                  </div>
+
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Last name"
+                    />
+                  </div>
+                </div>
+
+                <div class="mt-4">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter Email"
+                  />
+                </div>
+
+                <div class="mt-4">
+                  <input
+                    type="password"
+                    class="form-control"
+                    placeholder="Enter Password"
+                  />
+                </div>
+                <div class="form-check mb-3">
+                  <label class="form-check-label">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      name="remember"
+                    />
+                    Remember me
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 signup-btn">
+                  SIGN UP
+                </button>
+              </form>
+
+              <div class="or-text">or sign up with:</div>
+
+              <div class="social-icons">
+                <a href="#">
+                  <i class="bi bi-facebook"></i>
+                </a>
+
+                <a href="#">
+                  <i class="bi bi-google"></i>
+                </a>
+
+                <a href="#">
+                  <i class="bi bi-twitter"></i>
+                </a>
+
+                <a href="#">
+                  <i class="bi bi-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
