@@ -1,0 +1,355 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+:root {
+  --primary: #5b5ce2;
+  --primary-dark: #4546c8;
+  --secondary: #8b5cf6;
+  --background: #f5f7fc;
+  --surface: #ffffff;
+  --text-primary: #20243a;
+  --text-secondary: #737b91;
+  --border: #e8eaf3;
+  --danger: #e5484d;
+  --shadow: 0 8px 30px rgba(39, 48, 90, 0.07);
+  --shadow-hover: 0 16px 35px rgba(73, 76, 190, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      circle at 5% 0%,
+      rgba(139, 92, 246, 0.07),
+      transparent 28%
+    ),
+    var(--background);
+  color: var(--text-primary);
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 28px;
+}
+
+.page-heading {
+  margin-bottom: 28px;
+}
+
+.page-heading h1 {
+  margin: 0 0 8px;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+}
+
+.page-heading p {
+  margin: 0;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.MuiAppBar-root {
+  background: linear-gradient(
+    110deg,
+    #292c55 0%,
+    #4244a7 55%,
+    #6652d9 100%
+  ) !important;
+
+  box-shadow: 0 5px 24px rgba(40, 43, 93, 0.18) !important;
+}
+
+.MuiToolbar-root {
+  min-height: 72px !important;
+  padding-left: 5% !important;
+  padding-right: 5% !important;
+}
+
+.MuiAppBar-root .MuiTypography-root {
+  letter-spacing: -0.4px;
+}
+
+.MuiAppBar-root .MuiButton-root {
+  border-radius: 10px;
+  padding: 9px 15px;
+  font-weight: 600;
+  text-transform: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.MuiAppBar-root .MuiButton-root:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.MuiCard-root {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 18px !important;
+  background: var(--surface);
+  box-shadow: var(--shadow) !important;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease !important;
+}
+
+.MuiCard-root::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover) !important;
+  border-color: #d9d7ff;
+}
+
+.MuiCard-root:hover::before {
+  opacity: 1;
+}
+
+.MuiCardContent-root {
+  padding: 24px !important;
+}
+
+.MuiCardContent-root:last-child {
+  padding-bottom: 24px !important;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.MuiTypography-h4 {
+  font-weight: 800 !important;
+  letter-spacing: -0.8px !important;
+}
+
+.MuiTypography-h5 {
+  font-weight: 750 !important;
+}
+
+.MuiTypography-h6 {
+  font-weight: 700 !important;
+}
+
+.MuiTypography-colorTextSecondary {
+  color: var(--text-secondary);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.MuiButton-root {
+  border-radius: 10px !important;
+  padding: 10px 18px !important;
+  font-weight: 650 !important;
+  text-transform: none !important;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease !important;
+}
+
+.MuiButton-contained {
+  background: linear-gradient(
+    100deg,
+    var(--primary),
+    var(--secondary)
+  ) !important;
+  box-shadow: 0 4px 12px rgba(91, 92, 226, 0.22) !important;
+}
+
+.MuiButton-contained:hover {
+  box-shadow: 0 8px 18px rgba(91, 92, 226, 0.3) !important;
+  transform: translateY(-2px);
+}
+
+.MuiButton-outlined {
+  border-width: 1.5px !important;
+}
+
+.MuiButton-outlined:hover {
+  background: rgba(91, 92, 226, 0.06);
+}
+
+/* =========================
+   FORMS AND SEARCH
+========================= */
+
+.MuiPaper-root {
+  border: 1px solid var(--border);
+  border-radius: 20px !important;
+}
+
+.MuiTextField-root {
+  margin-bottom: 8px !important;
+}
+
+.MuiOutlinedInput-root {
+  border-radius: 12px !important;
+  background: #fff;
+  transition: box-shadow 0.2s ease;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #a6a5f4;
+}
+
+.MuiOutlinedInput-root.Mui-focused {
+  box-shadow: 0 0 0 3px rgba(91, 92, 226, 0.09);
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: var(--primary) !important;
+  border-width: 1.5px !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+  color: var(--primary) !important;
+}
+
+/* =========================
+   EMPTY STATES
+========================= */
+
+.empty-state {
+  padding: 48px 24px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px dashed #d6d9e8;
+  border-radius: 18px;
+}
+
+.empty-state h2 {
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.empty-state p {
+  color: var(--text-secondary);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-container,
+.MuiContainer-root {
+  animation: fadeInUp 0.45s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+  .MuiToolbar-root {
+    padding: 12px 16px !important;
+    min-height: 64px !important;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .MuiToolbar-root > .MuiTypography-root {
+    font-size: 1rem;
+    min-width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .MuiAppBar-root .MuiButton-root {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
+
+  .page-container {
+    padding: 24px 16px;
+  }
+
+  .MuiCardContent-root {
+    padding: 20px !important;
+  }
+
+  .MuiPaper-root {
+    border-radius: 16px !important;
+  }
+}
